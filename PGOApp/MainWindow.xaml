@@ -1,0 +1,87 @@
+﻿<Window x:Class="PGOApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PGOApp"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="POKEMON GO APPLICATION" Height="720" Width="758">
+    <Grid HorizontalAlignment="Left" Width="758">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="710*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://img.freepik.com/free-photo/background_53876-32169.jpg"></ImageBrush>
+        </Grid.Background>
+        <ListBox x:Name="resultsListbox" Margin="378,63,0,37" SelectionChanged="resultsListbox_SelectionChanged" Grid.Column="1" HorizontalAlignment="Left" Width="322"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="501,35,0,0" VerticalAlignment="Top" Width="76" Click="SearchButton_Click" Grid.Column="1" Height="20"/>
+        <TextBox x:Name="usernameSearchText" HorizontalAlignment="Left" Margin="381,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" Grid.Column="1"/>
+        <Button x:Name="FindAllButton" Content="Find ALL" HorizontalAlignment="Left" Margin="624,35,0,0" VerticalAlignment="Top" Width="76" Click="FindAllButton_Click" Grid.Column="1" Height="20"/>
+        <TextBox x:Name="UsernameText" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="28" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="UsernameLabel" Content="PTC/GOOGLE Username" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="138" FontStyle="Normal" Grid.Column="1" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="PasswordText" HorizontalAlignment="Left" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="28" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="PasswordLabel" Content="PTC/GOOGLE Password" HorizontalAlignment="Left" Margin="55,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="134" FontStyle="Normal" Grid.Column="1" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="EmailText" HorizontalAlignment="Left" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="28" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="EmailLabel" Content="PTC/GOOGLE Email" HorizontalAlignment="Left" Margin="67,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="112" FontStyle="Normal" Grid.Column="1" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="EmailPassText" HorizontalAlignment="Left" Margin="10,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="28" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="EmailPassLabel" Content="PTC/GOOGLE Email Password" HorizontalAlignment="Left" Margin="41,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="164" FontStyle="Normal" Grid.Column="1" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="DetailsText" HorizontalAlignment="Left" Margin="10,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="141" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="DetailsLabel" Content="Account Details/Notes" HorizontalAlignment="Left" Margin="58,225,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="130" FontStyle="Normal" Grid.Column="1" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <CheckBox x:Name="SoldCheckbox" Content="SOLD ACCOUNT?" HorizontalAlignment="Left" Margin="10,397,0,0" VerticalAlignment="Top" FontSize="14" VerticalContentAlignment="Center" Height="30" Width="140" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="ListedCheckBox" Content="LISTED ACCOUNT?" HorizontalAlignment="Left" Margin="10,432,0,0" VerticalAlignment="Top" FontSize="14" VerticalContentAlignment="Center" Height="30" Width="140" Grid.ColumnSpan="2"/>
+        <Button x:Name="AddRecordButton" Content="ADD RECORD" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top" Height="51" Width="140" FontSize="18" Click="AddRecordButton_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="UpdateRecordButton" Content="UPDATE RECORD" HorizontalAlignment="Left" Margin="10,533,0,0" VerticalAlignment="Top" Height="51" Width="140" FontSize="18" Click="UpdateRecordButton_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="DeleteRecordButton" Content="DELETE RECORD" HorizontalAlignment="Left" Margin="10,599,0,0" VerticalAlignment="Top" Height="51" Width="140" FontSize="18" Click="DeleteRecordButton_Click" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
