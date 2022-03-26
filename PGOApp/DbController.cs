@@ -14,7 +14,7 @@ namespace PGOApp
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(SqlConnecHelper.ConnecVal("PokemonGoDatabase")))
             {
-                var output = connection.Query<DbModel>($"SELECT * FROM PokemonGO.dbo.PGoTable where USERNAME = '{userName}'").ToList();
+                var output = connection.Query<DbModel>($"SELECT * FROM PokemonGO.dbo.PGoTable where USERNAME LIKE '%{userName}%'").ToList();
                 return output;
             }
         }
